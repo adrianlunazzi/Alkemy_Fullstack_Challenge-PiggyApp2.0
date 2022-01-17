@@ -36,14 +36,13 @@ console.log(
   app.get("port"),
   "have a nice coding :)"
 );
-
 //-----------Routes ------------//
 
 const auth = require("./routes/auth");
 const user = require("./routes/user");
 const category = require("./routes/category");
-const operation = require("./routes/operation");
 const operationType = require("./routes/operationType");
+const operation = require("./routes/operation");
 
 app.use("/", auth);
 app.use("/api/user", user);
