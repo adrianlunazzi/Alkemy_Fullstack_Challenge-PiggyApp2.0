@@ -21,8 +21,14 @@ export const NewOperation = () => {
        dispatch(getOperationType()); 
 
     }, [dispatch]);
+    useEffect(() => {
+        dispatch( getListCategories()); 
+ 
+     }, [dispatch]);
     const {operationType} = useSelector(state => state.getOperationType);
     const {category} = useSelector(state => state.getCategory)
+
+
     return (
         <div className="newOperationContainer">
             <h3>Registrar nueva operación</h3>
