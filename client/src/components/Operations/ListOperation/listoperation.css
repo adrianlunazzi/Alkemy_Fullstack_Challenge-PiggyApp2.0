@@ -1,0 +1,40 @@
+.tableContainer{
+    width: 100%;
+    }
+    
+    
+    .operationListContainer{
+        width: 100%;
+        padding:10px;
+    }
+    
+    .dataRow{
+        font-size:12px;
+        margin: auto;
+        text-align: center;
+    }
+    .dataTitle{
+        font-size:12px;
+        text-align: center;
+    }
+    
+    .btnContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media(min-width:700px) {
+        .dataRow{
+            font-size:16px;
+    
+        }
+        .dataTitle{
+            font-size:16px;
+        }
+        .btnContainer{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }

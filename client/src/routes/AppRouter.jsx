@@ -5,6 +5,7 @@ import { Register } from '../Pages/AuthPage/RegisterPage/Register'
 import { NotFoundPage } from '../Pages/NotFound/NotFoundPage'
 import { WelcomePage } from '../Pages/WelcomePage/WelcomePage'
 import { DashboardRouter } from './DashboardRouter'
+import { PrivateRoutes } from './PrivateRoutes'
 
 export const AppRouter = () => {
     return (
@@ -13,7 +14,11 @@ export const AppRouter = () => {
             <Route path ="/login" element = {<Login/>}/>
             <Route path ="/register" element = {<Register/>}/>
             <Route path = "/" element = {<WelcomePage/>}/>
-            <Route path ="/dashboard/*" element = {<DashboardRouter/>}/>
+            <Route path ="/dashboard/*" element = {
+                <PrivateRoutes>
+                    <DashboardRouter/>
+                </PrivateRoutes>
+            }/>
             <Route path = "/*" element = {<NotFoundPage/>}/>
         </Routes>   
     </BrowserRouter>

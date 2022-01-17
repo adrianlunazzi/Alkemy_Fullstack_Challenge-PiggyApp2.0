@@ -1,0 +1,16 @@
+.operationDetailContainer{
+    min-height: 85vh;
+}
+
+.operationDetailContainer h3{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.formDetailContainer{
+    padding: 20px
+}
+
+.btnOperationUpdateContainer{
+    text-align: center;
+}

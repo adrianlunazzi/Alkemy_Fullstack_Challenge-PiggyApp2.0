@@ -1,5 +1,6 @@
 import { types } from "../Type/types";
 import axios from "axios";
+import { url_base } from "../../Helpers/url_base";
 
 export const login = (email, password) => async (dispatch) => {
   try {
@@ -11,7 +12,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://localhost:5000/",
+      `${url_base}`,
       {
         email,
         password,
@@ -45,7 +46,7 @@ export const register = (name, email, password) => async (dispatch) => {
       },
     };
     const { data } = await axios.post(
-      "http://localhost:5000/register",
+      `${url_base}/register`,
       {
         name,
         email,

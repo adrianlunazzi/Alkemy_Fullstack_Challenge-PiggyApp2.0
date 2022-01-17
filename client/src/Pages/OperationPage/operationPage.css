@@ -1,0 +1,8 @@
+.operationContainer{
+      min-height: 85vh;
+}
+
+.operationContainer h3{
+    text-align: center;
+    margin-top: 30px
+    }
