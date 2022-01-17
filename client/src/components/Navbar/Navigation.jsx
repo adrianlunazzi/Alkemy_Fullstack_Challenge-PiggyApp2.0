@@ -25,8 +25,8 @@ export const Navigation = () => {
                         
                         </Nav>
                         <Nav>
-                        <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Perfil</NavDropdown.Item>
+                        <NavDropdown title={`Bienvenido ${userInfo.name}`} id="basic-nav-dropdown">
+                        <NavDropdown.Item href="#action/3.1">Mi Perfil</NavDropdown.Item>
  
                         <NavDropdown.Divider />
                         <NavDropdown.Item onClick={handleLogout} >Logout</NavDropdown.Item>

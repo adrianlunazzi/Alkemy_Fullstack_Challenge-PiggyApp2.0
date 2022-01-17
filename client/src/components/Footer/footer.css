@@ -1,0 +1,14 @@
+footer {
+    background-color: #6F42C1;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    height: 38px;
+    margin: auto;
+}
+
+footer p{
+
+    text-align: center;
+    margin: auto;
+}

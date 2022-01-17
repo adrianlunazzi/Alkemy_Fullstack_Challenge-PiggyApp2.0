@@ -2,3 +2,35 @@
     width: 100vw;
     min-height: 85vh;
 }
+
+.dashboardContent{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.columnRigth{
+    width: 100%;
+}
+.columnLeft{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+@media(min-width:700px) {
+    .dashboardContent{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .columnRigth{
+        width: 70%;
+    }
+    .columnLeft{
+        width: 25%;
+    }
+}

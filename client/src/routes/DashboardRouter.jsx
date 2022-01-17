@@ -5,6 +5,7 @@ import { OperationPage } from '../Pages/OperationPage/OperationPage'
 import { DashboardPage} from '../Pages/DashboardPage/DashboardPage'
 import { NewOperation } from '../components/Operations/NewOperationForm/NewOperation'
 import { OperationDetail } from '../components/Operations/OperationDetail/OperationDetail'
+import { Footer } from '../components/Footer/Footer'
 
 export const DashboardRouter = () => {
     return (
@@ -15,8 +16,10 @@ export const DashboardRouter = () => {
             <Route path ="/operation" element = {<OperationPage/>}/>
             <Route path ="/newoperation" element = {<NewOperation/>}/>
             <Route path="/operation/:id" element={<OperationDetail/>} />
+            <Route path="/perfil" element={<OperationDetail/>} />
 
         </Routes>
+        <Footer />
         </>
     )
 }

@@ -6,12 +6,14 @@ import { Button, Form } from 'react-bootstrap';
 import { getListCategories } from '../../Actions/categoryActions';
 import { updateOperation } from '../../Actions/operationAction';
 import './operationdetail.css'
+import { ErroMessege } from '../../ErroMessege/ErroMessege';
+import { Loading } from '../../../Loading/Loading';
 
 export const OperationDetail = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { id } = useParams();
-    const {operation} = useSelector(state => state.getOperation)
+    const {operation, error, loading} = useSelector(state => state.getOperation)
     const {category} = useSelector(state => state.getCategory)
 
     const operationSelected = operation && operation.filter (item =>item.id == id )
@@ -23,6 +25,8 @@ export const OperationDetail = () => {
         <>
         <div className="operationDetailContainer">
             <h3>Editar Operacion</h3>
+            {error && <ErroMessege variant ="danger">{error}</ErroMessege>}
+            {loading && <Loading/>}
             { operationSelected && operationSelected.map(item=>(
             <Formik key= {item.id}
             

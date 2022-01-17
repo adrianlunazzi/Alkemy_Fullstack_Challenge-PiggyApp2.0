@@ -18,12 +18,16 @@
         text-align: center;
     }
     
-    .btnContainer{
+    .btn_Container{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     @media(min-width:700px) {
+        .btn_Container{
+            display: block;
+            align-items: center;
+        }
         .dataRow{
             font-size:16px;
     
@@ -31,10 +35,5 @@
         .dataTitle{
             font-size:16px;
         }
-        .btnContainer{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
     }
+    

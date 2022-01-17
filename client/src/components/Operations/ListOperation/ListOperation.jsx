@@ -74,8 +74,8 @@ export const ListOperation = () => {
             <td className="dataRow">{item.amount}</td>
             <td className="dataRow">{item.operationTypes.name}</td>
             <td className="dataRow">{item.categories.name}</td>
-            <td className="btnContainer">  
-            <Button variant = "info"className="mx-2"  onClick = {()=>handleGetOperation(item.id)}><GrEdit/></Button>
+            <td className="btn_Container">  
+            <Button variant = "info"  onClick = {()=>handleGetOperation(item.id)}><GrEdit/></Button>
             <Button variant ="danger"onClick = {()=>deleteHandler(item.id)}><GrTrash/></Button>
             </td>
           </tr>
