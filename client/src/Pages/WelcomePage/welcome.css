@@ -1,0 +1,42 @@
+.welcomeContainer{
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.welcomeTitle{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.welcomeContainer p{
+    text-align: center;
+    margin-top: 20px;
+}
+.welcomeButtonsContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.welcomeButtons{
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    flex-direction: column;    
+}
+
+@media(min-width:700px) {
+    .welcomeButtonsContainer{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .welcomeButtons{
+            width: 30vw;
+            display: flex;
+            margin-left: 50px;
+        }
+}
