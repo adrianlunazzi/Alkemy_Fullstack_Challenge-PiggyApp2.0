@@ -1,0 +1,116 @@
+/*Login*/
+
+.loginContainer{
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.loginTitle{
+    text-align: center;
+    margin-top: 70px;
+
+}
+.loginTitle p{
+    margin-top: 20px;
+}
+
+.loginForm{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    background-color: #6a36b97a;
+    border-radius: 20px;
+}
+
+.lodingAcount{
+text-align: center;
+}
+
+.lodingAcount p{
+    margin-top: 30px;
+    }
+
+.errorMessage{
+    color: red;
+    font-size: 12px;
+}
+
+.loginInput{
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+    align-items: center;
+    text-align: center;
+}
+
+@media(min-width:700px) {
+    .loginForm{
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        background-color: #6a36b97a;
+        width: 650px;
+        border-radius: 20px;
+    }
+
+    .loginInput{
+        width: 600px;
+   
+    }
+    .errorMessage{
+        color: rgb(255, 129, 129);
+        
+        font-size: 15px;
+    }
+}
+
+/*Register*/
+
+.registerContainer{
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.registerTitle{
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px;
+}
+.registerTitle p{
+    margin-top: 30px;
+}
+.registerForm{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #6a36b97a;
+    border-radius: 20px;
+}
+
+@media(min-width:700px) {
+    .registerForm{
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        background-color: #6a36b97a;
+        width: 650px;
+        border-radius: 20px;
+    }
+}
+
+

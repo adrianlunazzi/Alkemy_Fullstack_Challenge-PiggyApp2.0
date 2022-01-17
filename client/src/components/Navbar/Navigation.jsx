@@ -1,8 +1,19 @@
 import React from 'react'
+import {Link, useNavigate} from "react-router-dom"
+import {useDispatch, useSelector}from "react-redux"
 import {Container, Navbar, NavDropdown,Nav }from "react-bootstrap"
-import {Link} from "react-router-dom"
+import { logout } from '../Actions/authActions'
+
 
 export const Navigation = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const {userInfo} = useSelector (state => state.auth);
+
+    const handleLogout = ()=>{
+        dispatch(logout())
+        navigate("/")
+    }
     return (
         <Navbar bg="primary" variant= "dark" expand="lg">
                 <Container>
@@ -14,11 +25,11 @@ export const Navigation = () => {
                         
                         </Nav>
                         <Nav>
-                        <NavDropdown title="nombre de usuario" id="basic-nav-dropdown">
+                        <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Perfil</NavDropdown.Item>
  
                         <NavDropdown.Divider />
-                        <NavDropdown.Item >Logout</NavDropdown.Item>
+                        <NavDropdown.Item onClick={handleLogout} >Logout</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     </Navbar.Collapse>
