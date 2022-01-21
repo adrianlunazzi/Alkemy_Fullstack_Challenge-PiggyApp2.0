@@ -27,7 +27,7 @@ const auth = {
               id: user.id,
               name: user.name,
               email: user.email,
-              token: generateToken(user.id),
+              token: generateToken(user.id, user.name),
             });
           } else {
             res.status(401).json({
@@ -71,6 +71,17 @@ const auth = {
           });
         }
       }
+    });
+  },
+  revalidateToken: (req, res, next) => {
+    const { id, name } = req;
+    const token = generateToken(id, name);
+
+    res.json({
+      ok: true,
+      id,
+      name,
+      token,
     });
   },
 };

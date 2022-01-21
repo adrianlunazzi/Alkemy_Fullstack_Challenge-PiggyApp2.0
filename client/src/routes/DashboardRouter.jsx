@@ -7,16 +7,19 @@ import { NewOperation } from '../components/Operations/NewOperationForm/NewOpera
 import { OperationDetail } from '../components/Operations/OperationDetail/OperationDetail'
 import { Footer } from '../components/Footer/Footer'
 
+
 export const DashboardRouter = () => {
+
+    
     return (
         <>
         <Navigation/>
         <Routes>
             <Route path ="/" element = {<DashboardPage/>}/>
-            <Route path ="/operation" element = {<OperationPage/>}/>
+            <Route path ="/operation" element = { <OperationPage/>}/>
             <Route path ="/newoperation" element = {<NewOperation/>}/>
             <Route path="/operation/:id" element={<OperationDetail/>} />
-            <Route path="/perfil" element={<OperationDetail/>} />
+        
 
         </Routes>
         <Footer />

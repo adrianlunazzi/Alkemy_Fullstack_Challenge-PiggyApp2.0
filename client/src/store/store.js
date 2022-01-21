@@ -1,5 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 import {
   authReducer,
   authRegisterReducer,
@@ -20,11 +22,16 @@ const composeEnhancers =
   (typeof window !== "undefined" &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose;
+const persistConfig = {
+  key: "main-root",
+  storage,
+};
 
 const reducers = combineReducers({
   /* auth*/
   auth: authReducer,
   register: authRegisterReducer,
+
   /*operation*/
   getOperation: operationReducer,
   createOperation: createOperationReducer,
@@ -38,8 +45,10 @@ const reducers = combineReducers({
   /*operationType*/
   getOperationType: operationTypeReducer,
 });
+const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const store = createStore(
-  reducers,
+  persistedReducer,
   composeEnhancers(applyMiddleware(thunk))
 );
+export const Persistor = persistStore(store);

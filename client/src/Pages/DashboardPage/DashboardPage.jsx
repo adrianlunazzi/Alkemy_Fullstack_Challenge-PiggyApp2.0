@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {useNavigate}from "react-router-dom"
 import {Button}from "react-bootstrap"
 import { GoDiffAdded } from "react-icons/go";
@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 export const DashboardPage = () => {
     const navigate = useNavigate();
     const {isLogged} = useSelector  (state => state.auth)
-    console.log("soy isLogged", isLogged)
+   
     const handleCreateOperation = ()=>{
     navigate ("/dashboard/newoperation")
 }

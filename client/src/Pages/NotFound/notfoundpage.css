@@ -1,4 +1,22 @@
 .notFoundContainer{
     width: 100vw;
     min-height: 85vh;
+    padding: 30px;
+   
+}
+.notFoundContent{
+    background-image: url("../../assets/404-error.png");
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    min-height: 85vh;
+}
+.notFoundTitle h2 {
+    text-align: center;    
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
 }

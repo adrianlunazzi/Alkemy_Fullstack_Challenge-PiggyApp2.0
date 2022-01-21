@@ -8,6 +8,9 @@ import { getOperationType } from '../../Actions/operationTypeAction'
 import { createOperation } from '../../Actions/operationAction'
 import './newoperation.css'
 
+
+
+
 export const NewOperation = () => {
     const navigate = useNavigate()
     const userConect = localStorage.getItem("userInfo")
@@ -18,13 +21,15 @@ export const NewOperation = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-       dispatch(getOperationType()); 
-
-    }, [dispatch]);
-    useEffect(() => {
         dispatch( getListCategories()); 
  
      }, [dispatch]);
+     
+    useEffect(() => {
+       dispatch(getOperationType()); 
+
+    }, [dispatch]);
+   
     const {operationType} = useSelector(state => state.getOperationType);
     const {category} = useSelector(state => state.getCategory)
 

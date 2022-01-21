@@ -14,7 +14,7 @@ export const Balance = () => {
     
     const {operation} = useSelector(state => state.getOperation)
    
-
+//Funcion para calcular el total de los ingresos
     const totalIncome = () => {
         const operationIncomeList =
           operation && operation.filter((income) => income.operationTypeId === 1);
@@ -25,7 +25,7 @@ export const Balance = () => {
       
         return totalIncome;
       };
-
+//Funcion para calcular el total de los egresos
     const totalExpense = () =>{
         const operationExpenseList = operation && operation.filter ((expenses)=> expenses.operationTypeId === 2);
         const expenseResult = operationExpenseList && operationExpenseList.map ((items)=>items.amount);
@@ -33,7 +33,7 @@ export const Balance = () => {
         const totalExpense = expenseResult && expenseResult.reduce(acumExp, 0);
         return totalExpense;
     }
-
+// Funcion para calcular el balance de operaciones (igresos - egresos)
     const totalBalance = () =>{
        const total =  totalIncome()-totalExpense();
        return total
