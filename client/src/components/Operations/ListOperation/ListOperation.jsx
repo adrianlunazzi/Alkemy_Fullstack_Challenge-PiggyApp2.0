@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react'
 import {useDispatch, useSelector} from"react-redux"
 import { useNavigate } from 'react-router-dom'
-
-
-import {Table, Button}from "react-bootstrap"
-import { GrEdit , GrTrash} from "react-icons/gr";
-import Swal from 'sweetalert2'
-import "./listoperation.css"
 import { deleteOperation, getListOperation } from '../../Actions/operationAction';
 import { ErroMessege } from '../../ErroMessege/ErroMessege';
 import { Loading } from '../../../Loading/Loading';
+import Swal from 'sweetalert2'
+import "./listoperation.css"
+import { GrEdit , GrTrash} from "react-icons/gr";
+import {Table, Button}from "react-bootstrap"
+
 
 
 export const ListOperation = () => {
@@ -21,6 +20,8 @@ export const ListOperation = () => {
     }, [dispatch])
 
     const {error, operation, loading} = useSelector(state =>state.getOperation);
+    
+
 
     const deleteHandler = (id) => {
         Swal.fire({
@@ -48,11 +49,15 @@ export const ListOperation = () => {
           dispatch(getListOperation(id))
           navigate(`/dashboard/operation/${id}`)
           }
-  
+          
     return (
+
         <div className = "operationListContainer"> 
+
             {error && <ErroMessege variant ="danger">{error}</ErroMessege>}
             {loading && <Loading/>}
+           
+            
         <Table striped bordered hover variant="dark" responsive="sm"className="tableContainer" >
                
         <thead className="tableContainer">

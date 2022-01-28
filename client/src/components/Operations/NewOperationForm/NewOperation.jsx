@@ -44,8 +44,8 @@ export const NewOperation = () => {
                 amount: "",
                 date:"",
                 operationTypeId: "",
-                userId: userId.id,
                 categoryId: "",
+                userId: userId.id,
              }}
 
              validate ={(values)=>{
@@ -121,7 +121,7 @@ export const NewOperation = () => {
                         onChange= {handleChange}
                         onBlur = {handleBlur}
                         >
-                        <option>Selecciona el tipo de operacion</option> 
+                        <option select = {-1} >Selecciona el tipo de operacion</option> 
                             {
                                  operationType && operationType.map((item)=>(
                             <option key={item.id} value={item.id}>{item.name}</option>
